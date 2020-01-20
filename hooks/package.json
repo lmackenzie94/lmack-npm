@@ -1,0 +1,16 @@
+{
+  "name": "@lmack/hooks",
+  "version": "1.0.2",
+  "description": "custom React hooks",
+  "main": "index.js",
+  "author": "Luke MacKenzie",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}

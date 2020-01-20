@@ -1,0 +1,9 @@
+{
+  "name": "lmack",
+  "version": "1.0.0",
+  "description": "custom npm packages",
+  "main": "index.js",
+  "repository": "https://github.com/lmackenzie94/lmack-packages.git",
+  "author": "Luke MacKenzie",
+  "license": "MIT"
+}
