@@ -5,20 +5,24 @@ import { smoothScrollTo } from '@campj/utils/scroll';
 // DEFAULT COMPONENTS
 function DefaultRenderer() {
   return (
-    <div data-renderer>
+    <div data-accordion-renderer>
       <h3>{`Pass an 'Item Renderer' to Accordion to customize this space`}</h3>
     </div>
   );
 }
 
 function DefaultContainer({ children }) {
-  return <div data-container>{children}</div>;
+  return <div data-accordion-container>{children}</div>;
 }
 
 function DefaultButton({ open, data, labelkey, ...rest }) {
   return (
-    <button data-button {...rest} aria-expanded={open ? `true` : `false`}>
-      <h3 data-button-title>{data[labelkey]}</h3>
+    <button
+      data-accordion-button
+      {...rest}
+      aria-expanded={open ? `true` : `false`}
+    >
+      <h3 data-accordion-button-title>{data[labelkey]}</h3>
     </button>
   );
 }
@@ -37,8 +41,13 @@ function ItemWrapper({ open, id, children }) {
     }
   });
   return (
-    <a.div data-wrapper-outer id={id} style={spring} ref={outerHeightRef}>
-      <div data-wrapper-inner ref={innerHeightRef}>
+    <a.div
+      data-accordion-wrapper-outer
+      id={id}
+      style={spring}
+      ref={outerHeightRef}
+    >
+      <div data-accordion-wrapper-inner ref={innerHeightRef}>
         {children}
       </div>
     </a.div>
