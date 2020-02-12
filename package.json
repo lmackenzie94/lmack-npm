@@ -1,6 +1,6 @@
 {
   "name": "lmack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "custom npm packages",
   "main": "index.js",
   "repository": "https://github.com/lmackenzie94/lmack-packages.git",
