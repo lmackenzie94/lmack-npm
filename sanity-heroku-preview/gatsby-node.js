@@ -13,7 +13,7 @@ exports.onPreBootstrap = (_, options) => {
   if (!process.env.DATASET && !options.datasetToUse) {
     console.log(
       chalk.red.bold(
-        `@campj/preview-sanity: Please add a "DATASET" to your .env file OR add "datasetToUse" as an option of this plugin in your gatsby-config`
+        `@lmack/preview-sanity: Please add a "DATASET" to your .env file OR add "datasetToUse" as an option of this plugin in your gatsby-config`
       )
     );
   }
@@ -24,7 +24,7 @@ exports.onPreBootstrap = (_, options) => {
   if (!process.env.PROJECT_ID && !options.projectID) {
     console.log(
       chalk.red.bold(
-        `@campj/preview-sanity: Please add a "PROJECT_ID" to your .env file OR add "projectID" as an option of this plugin in your gatsby-config`
+        `@lmack/preview-sanity: Please add a "PROJECT_ID" to your .env file OR add "projectID" as an option of this plugin in your gatsby-config`
       )
     );
   }
@@ -35,7 +35,7 @@ exports.onPreBootstrap = (_, options) => {
   if (!process.env.SANITY_TOKEN && !options.sanityToken) {
     console.log(
       chalk.red.bold(
-        `@campj/preview-sanity: Please add a "SANITY_TOKEN" to your .env file OR add "sanityToken" as an option of this plugin in your gatsby-config`
+        `@lmack/preview-sanity: Please add a "SANITY_TOKEN" to your .env file OR add "sanityToken" as an option of this plugin in your gatsby-config`
       )
     );
   }
@@ -54,7 +54,7 @@ exports.onPreBootstrap = (_, options) => {
     if (!options.herokuAppName) {
       herokuAppName = readlineSync.question(
         chalk.blue.bold(
-          `@campj/preview-sanity: Please provide a name for your heroku app (no spaces or capital letters): `
+          `@lmack/preview-sanity: Please provide a name for your heroku app (no spaces or capital letters): `
         )
       );
     } else {
@@ -62,7 +62,7 @@ exports.onPreBootstrap = (_, options) => {
     }
     console.log(
       chalk.green.bold(
-        `@campj/preview-sanity: Heroku app will be named ${herokuAppName}`
+        `@lmack/preview-sanity: Heroku app will be named ${herokuAppName}`
       )
     );
   }
@@ -75,7 +75,7 @@ exports.onPreBootstrap = (_, options) => {
     if (!fs.existsSync(`./static`)) {
       console.log(
         chalk.green.bold(
-          `@campj/preview-sanity: Creating the static directory...`
+          `@lmack/preview-sanity: Creating the static directory...`
         )
       );
       fs.mkdirSync(`./static`);
@@ -90,7 +90,7 @@ exports.onPreBootstrap = (_, options) => {
       if (fileContent.includes(`herokuapp`)) {
         console.log(
           chalk.yellow.bold(
-            `@campj/preview-sanity: Looks like you already have a heroku redirect set up. Check 'static/_redirects/'`
+            `@lmack/preview-sanity: Looks like you already have a heroku redirect set up. Check 'static/_redirects/'`
           )
         );
       } else {
@@ -102,7 +102,7 @@ exports.onPreBootstrap = (_, options) => {
             if (err) throw err;
             console.log(
               chalk.green.bold(
-                `@campj/preview-sanity: Added a redirect for heroku to your existing _redirects file`
+                `@lmack/preview-sanity: Added a redirect for heroku to your existing _redirects file`
               )
             );
           }
@@ -117,7 +117,7 @@ exports.onPreBootstrap = (_, options) => {
           if (err) throw err;
           console.log(
             chalk.green.bold(
-              `@campj/preview-sanity: Successfully created _redirects in the "static" directory`
+              `@lmack/preview-sanity: Successfully created _redirects in the "static" directory`
             )
           );
         }
@@ -129,13 +129,13 @@ exports.onPreBootstrap = (_, options) => {
     // create the heroku app and required files (assumes user is logged in)
     console.log(
       chalk.green.bold(
-        `@campj/preview-sanity: Setting up Heroku app. Please wait...`
+        `@lmack/preview-sanity: Setting up Heroku app. Please wait...`
       )
     );
     if (fs.existsSync(`./Procfile`)) {
       console.log(
         chalk.yellow.bold(
-          `@campj/preview-sanity: Procfile already exists. Make sure your heroku dyno is properly set`
+          `@lmack/preview-sanity: Procfile already exists. Make sure your heroku dyno is properly set`
         )
       );
     } else {
@@ -146,7 +146,7 @@ exports.onPreBootstrap = (_, options) => {
           if (err) throw err;
           console.log(
             chalk.green.bold(
-              `@campj/preview-sanity: Successfully created Procfile`
+              `@lmack/preview-sanity: Successfully created Procfile`
             )
           );
         }
@@ -168,7 +168,7 @@ exports.onPreBootstrap = (_, options) => {
         else
           console.log(
             chalk.green.bold(
-              `@campj/preview-sanity: Changed Heroku app name to ${newName} and set all required environment variables`
+              `@lmack/preview-sanity: Changed Heroku app name to ${newName} and set all required environment variables`
             )
           );
       }
@@ -192,7 +192,7 @@ exports.onPreBootstrap = (_, options) => {
             resolve(appName);
             console.log(
               chalk.green.bold(
-                `@campj/preview-sanity: Successfully created new Heroku app`
+                `@lmack/preview-sanity: Successfully created new Heroku app`
               )
             );
           }
@@ -210,7 +210,7 @@ exports.onPreBootstrap = (_, options) => {
       if (fileContent.includes(`SANITY_TOKEN`)) {
         console.log(
           chalk.yellow.bold(
-            `@campj/preview-sanity: Looks like you already have a SANITY_TOKEN set up in your netlify.toml`
+            `@lmack/preview-sanity: Looks like you already have a SANITY_TOKEN set up in your netlify.toml`
           )
         );
       } else {
@@ -219,19 +219,19 @@ exports.onPreBootstrap = (_, options) => {
             if (err) throw err;
             console.log(
               chalk.green.bold(
-                `@campj/preview-sanity: Added Netlify environment variables to netlify.toml`
+                `@lmack/preview-sanity: Added Netlify environment variables to netlify.toml`
               )
             );
             console.log(
               chalk.yellow.bold(
-                `@campj/preview-sanity: If you had previously set environment variables, make sure you combine them into one 'environment' object`
+                `@lmack/preview-sanity: If you had previously set environment variables, make sure you combine them into one 'environment' object`
               )
             );
           });
         } else {
           console.log(
             chalk.red.bold(
-              `@campj/preview-sanity: Please add your SANITY_TOKEN to your .env file OR add "sanityToken" as an option of this plugin in your gatsby-config`
+              `@lmack/preview-sanity: Please add your SANITY_TOKEN to your .env file OR add "sanityToken" as an option of this plugin in your gatsby-config`
             )
           );
         }
@@ -242,14 +242,14 @@ exports.onPreBootstrap = (_, options) => {
           if (err) throw err;
           console.log(
             chalk.green.bold(
-              `@campj/preview-sanity: Successfully created netlify.toml with necessary environment variables`
+              `@lmack/preview-sanity: Successfully created netlify.toml with necessary environment variables`
             )
           );
         });
       } else {
         console.log(
           chalk.red.bold(
-            `@campj/preview-sanity: Please add your SANITY_TOKEN to your .env file OR add "sanityToken" as an option of this plugin in your gatsby-config`
+            `@lmack/preview-sanity: Please add your SANITY_TOKEN to your .env file OR add "sanityToken" as an option of this plugin in your gatsby-config`
           )
         );
       }

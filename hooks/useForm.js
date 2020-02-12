@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import serialize from 'form-serialize';
 import PropTypes from 'prop-types';
 
-function useForm(callback) {
+export default function useForm(callback) {
   const formRef = useRef();
   const shouldDoSubmit = useRef(false);
   const [inputs, setInputs] = useState({});
@@ -53,5 +53,3 @@ function useForm(callback) {
 useForm.PropTypes = {
   callback: PropTypes.func
 };
-
-export default useForm;

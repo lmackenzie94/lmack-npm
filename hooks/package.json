@@ -1,6 +1,6 @@
 {
   "name": "@lmack/hooks",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "custom React hooks",
   "main": "index.js",
   "author": "Luke MacKenzie",
@@ -12,5 +12,8 @@
   "devDependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
+  },
+  "dependencies": {
+    "form-serialize": "^0.7.2"
   }
 }

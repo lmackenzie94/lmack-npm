@@ -1,12 +1,12 @@
 import React, { useState, useRef } from 'react';
 import { useSpring, a } from 'react-spring';
-import { smoothScrollTo } from '@campj/utils/scroll';
 
 // DEFAULT COMPONENTS
 function DefaultRenderer() {
   return (
     <div data-accordion-renderer>
       <h3>{`Pass an 'Item Renderer' to Accordion to customize this space`}</h3>
+      <a href="https://google.ca">Google</a>
     </div>
   );
 }
@@ -40,11 +40,16 @@ function ItemWrapper({ open, id, children }) {
       }
     }
   });
+  const visibilitySpring = useSpring({
+    visibility: open ? 'visible' : 'hidden',
+    delay: open ? 0 : 700
+  });
   return (
     <a.div
       data-accordion-wrapper-outer
       id={id}
-      style={spring}
+      // need visibility:hidden when closed so elements inside are not tabbable
+      style={{ ...spring, ...visibilitySpring }}
       ref={outerHeightRef}
     >
       <div data-accordion-wrapper-inner ref={innerHeightRef}>
@@ -60,7 +65,6 @@ function Accordion({
   ButtonComponent = DefaultButton,
   ItemRenderer = DefaultRenderer,
   allowMultipleOpen = false,
-  containerId,
   labelkey = `Label goes here`,
   items
 }) {
@@ -78,7 +82,6 @@ function Accordion({
       let newActiveIdx = [idx];
       setActiveIdx(newActiveIdx);
     }
-    smoothScrollTo(containerId);
   };
 
   const handleClick = idx => {
