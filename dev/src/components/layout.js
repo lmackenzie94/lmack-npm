@@ -4,8 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import NetworkDetector from "@lmack/networkDetector/src/index"
-import "@lmack/networkDetector/styles.css"
+import NetworkDetector from "@lmack/network-detector/dist/index.js" //fix this
+import "@lmack/network-detector/styles.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,11 +30,11 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
+        {/* <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        </footer> */}
       </div>
     </>
   )

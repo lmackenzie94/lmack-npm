@@ -1,10 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import Accordion from "@lmack/accordion/src/index"
+import Accordion from "@lmack/accordion"
 import "@lmack/accordion/styles.css"
+import { Link } from "gatsby"
 
 const testItems = [{ title: "Hi" }, { title: "Bye" }]
 
@@ -18,6 +18,9 @@ const IndexPage = () => (
       <Image />
     </div>
     <Accordion items={testItems} labelkey="title" />
+    <div>
+      <Link to="imageSlider">Image Slider</Link>
+    </div>
   </Layout>
 )
 

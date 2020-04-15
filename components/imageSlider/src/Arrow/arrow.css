@@ -1,0 +1,22 @@
+[data-arrow] {
+  position: absolute;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+}
+
+[data-arrow]:hover,
+[data-arrow]:focus {
+  background-color: #fff;
+}
