@@ -1,3 +1,3 @@
-export { default as useOutsideClickDetect } from './useOutsideClickDetect';
-export { default as useForm } from './useForm';
-export { default as useDebounce } from './useDebounce';
+export { default as useOutsideClickDetect } from './dist/useOutsideClickDetect';
+export { default as useForm } from './dist/useForm';
+export { default as useDebounce } from './dist/useDebounce';
