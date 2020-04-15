@@ -1153,6 +1153,11 @@
     react-dom "^16.12.0"
     react-spring "^8.0.27"
 
+"@lmack/image-slider@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@lmack/image-slider/-/image-slider-1.0.0.tgz#7394e85d80a8717723ab099c67453908f82767b6"
+  integrity sha512-kUG+5AzxBoIHVEgjTlAXu1jZ6mYw6NsB/QIbjX0xy7PX82Whhis0NqLR7jq+lXBAFjAmg9amoE9ULHc/RfxIfQ==
+
 "@lmack/network-detector@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@lmack/network-detector/-/network-detector-1.0.0.tgz#fc27489883ac724a38ae8519997dc5d7bbadadc9"
