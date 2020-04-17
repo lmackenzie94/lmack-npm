@@ -1,8 +1,8 @@
 {
   "name": "@lmack/hooks",
-  "version": "1.0.4",
+  "version": "1.0.11",
   "description": "custom React hooks",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "Luke MacKenzie",
   "license": "MIT",
   "scripts": {
@@ -14,6 +14,7 @@
     ]
   },
   "files": [
+    "dist",
     "index.js"
   ],
   "peerDependencies": {

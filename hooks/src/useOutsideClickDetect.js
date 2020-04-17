@@ -1,10 +1,15 @@
 import { useEffect, useRef } from 'react';
 
+/**
+ * @function useOutsideClickDetect
+ * @param {function} callback - a callback to execute when a click is detected outside the wrapper
+ * @returns {array} - returns an array of refs for the wrapper and click area [wrapper, clickArea]
+ */
 export default function useOutsideClickDetect(callback) {
   const wrapper = useRef();
   const clickArea = useRef();
 
-  const handleClickOutside = e => {
+  const handleClickOutside = (e) => {
     if (wrapper.current && !wrapper.current.contains(e.target)) {
       callback();
     }
@@ -25,6 +30,6 @@ export default function useOutsideClickDetect(callback) {
 
   return {
     wrapper,
-    clickArea
+    clickArea,
   };
 }

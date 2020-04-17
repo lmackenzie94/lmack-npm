@@ -7,6 +7,11 @@ exports["default"] = useOutsideClickDetect;
 
 var _react = require("react");
 
+/**
+ * @function useOutsideClickDetect
+ * @param {function} callback - a callback to execute when a click is detected outside the wrapper
+ * @returns {array} - returns an array of refs for the wrapper and click area [wrapper, clickArea]
+ */
 function useOutsideClickDetect(callback) {
   var wrapper = (0, _react.useRef)();
   var clickArea = (0, _react.useRef)();

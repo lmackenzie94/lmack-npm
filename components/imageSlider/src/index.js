@@ -4,7 +4,7 @@ import Slide from './Slide';
 import './slider.css';
 import Arrow from './Arrow';
 
-const ImageSlider = ({ slides, width = '600px', height = '400px' }) => {
+const ImageSlider = ({ slides, width = '600px' }) => {
   const [activeIdx, setActiveIdx] = useState(0);
   const numOfImages = slides.length;
 
